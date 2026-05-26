@@ -1,40 +1,163 @@
-/* Configuración base */
+/* Estilos generales para todo el sitio (body) */
 body {
+    /* Color de fondo gris apenas más oscuro que el blanco puro */
+    background-color: #f5f5f5;
+    /* Color de texto gris oscuro para una lectura agradable */
+    color: #333333;
+    /* Tipografía base para textos estándar */
+    font-family: Arial, sans-serif;
+    /* Reseteamos márgenes por defecto */
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    color: #060D0C; /* Nuevo color de texto solicitado */
-    /* Fondo con color base #F0EDE5 y un degradado sutil hacia negro al fondo */
-    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 100%), #F0EDE5;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 60px 20px;
+}
+
+/* --- ESTILOS DEL MENÚ DE NAVEGACIÓN --- */
+.menu-navegacion {
+    /* Centra los botones del menú en la pantalla */
     text-align: center;
+    /* Margen de espacio arriba y abajo del menú */
+    padding: 30px 0 10px 0;
 }
 
-/* Estilos de Título */
+/* Estilo para cada uno de los botones (Home, Fotografía) */
+.boton-nav {
+    /* Cambia la tipografía de los botones a la fuente Roboto */
+    font-family: 'Roboto', sans-serif;
+    /* Hace que se comporten como cajas individuales para poder darles tamaño */
+    display: inline-block;
+    /* Color de texto gris oscuro */
+    color: #555555;
+    /* Elimina el subrayado clásico de los enlaces */
+    text-decoration: none;
+    /* Espaciado interno: 10px arriba/abajo y 20px a los costados para que parezca un botón */
+    padding: 10px 20px;
+    /* Margen de separación entre un botón y el otro */
+    margin: 0 5px;
+    /* Tamaño de la letra */
+    font-size: 0.95rem;
+    /* Transición suave para cuando cambia de color al pasar el mouse */
+    transition: all 0.3s ease;
+    /* Añade un borde fino gris alrededor del botón */
+    border: 1px solid #dddddd;
+    /* Redondea las esquinas de los botones */
+    border-radius: 4px;
+    /* Fondo blanco para que resalten del fondo gris de la página */
+    background-color: #ffffff;
+}
+
+/* Efecto visual al pasar el cursor sobre un botón */
+.boton-nav:hover {
+    /* Cambia el texto a negro */
+    color: #111111;
+    /* Cambia el borde a un gris más oscuro */
+    border-color: #999999;
+}
+
+/* Clase especial para identificar en qué página está el usuario actualmente */
+.boton-nav.activo {
+    /* Fondo negro */
+    background-color: #111111;
+    /* Texto blanco */
+    color: #ffffff;
+    /* Borde negro */
+    border-color: #111111;
+    /* Letra un poco más firme */
+    font-weight: bold;
+}
+
+
+/* --- ESTILOS DE LA CAJA CONTENEDORA --- */
+.contenedor {
+    /* Ajustamos el ancho máximo a 600px para que las líneas de texto sean cortas y legibles */
+    max-width: 600px;
+    /* Centra la caja horizontalmente. Añade 20px arriba y 60px abajo */
+    margin: 20px auto 60px auto;
+    /* Espacio acolchonado interno */
+    padding: 20px;
+}
+
+
+/* --- ESTILOS DE TIPOGRAFÍAS Y PÁRRAFOS --- */
 h1 {
-    font-family: 'Merriweather', serif;
-    font-size: 72px;
-    margin-bottom: 50px;
-
+    /* Aplicamos la fuente Merriweather de Google Fonts */
+    font-family: 'Merriweather', Georgia, serif;
+    color: #111111;
+    font-size: 2.4rem;
+    margin-top: 10px;
+    margin-bottom: 25px;
 }
 
-/* Estilos de Subtítulos */
 h2 {
-    font-family: 'Merriweather', serif;
-    font-size: 36px;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    /* Aplicamos la fuente Roboto de Google Fonts */
+    font-family: 'Roboto', sans-serif;
+    /* Forzamos a que use su variable Regular (peso 400) */
+    font-weight: 400;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-top: 35px;
+    margin-bottom: 12px;
 }
 
-/* Estilos de Párrafos */
 p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    max-width: 500px;
-    line-height: 1.6;
-    margin: 0 auto 50px auto;
+    /* Interlineado amplio para dar más aire y mejorar la lectura */
+    line-height: 1.75;
+    /* Mayor espaciado entre un párrafo y el siguiente */
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+    text-align: left;
+}
+
+/* Enlaces generales dentro de los párrafos (como el de Cristian Bravo) */
+p a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- ESTILOS EXCLUSIVOS PARA LA SECCIÓN DE FOTOS --- */
+.seccion-foto {
+    /* Añade separación superior con respecto al título h1 */
+    margin-top: 30px;
+}
+
+/* Estilo para la imagen embebida */
+.foto-portfolio {
+    /* Hace que la imagen ocupe el 100% del ancho disponible de la caja (600px) */
+    width: 100%;
+    /* Mantiene la proporción original de la imagen para que no se deforme */
+    height: auto;
+    /* Hace que se comporte como un bloque para controlar sus márgenes */
+    display: block;
+    /* Redondea sutilmente las esquinas de la fotografía */
+    border-radius: 4px;
+    /* Aplica una sombra muy suave debajo de la foto para darle volumen */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Contenedor del enlace que está debajo de la foto */
+.enlace-foto {
+    /* Centra el enlace de "Ver en tamaño completo" justo debajo de la imagen */
+    text-align: center;
+    /* Espacio extra arriba para separarlo un poco de la foto */
+    margin-top: 20px;
+}
+
+/* Estilo específico para el enlace de "Ver en tamaño completo" */
+.enlace-foto a {
+    color: #555555;
+    font-size: 0.95rem;
+    text-decoration: none;
+    /* Añade una línea fina gris debajo como estilo minimalista */
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 2px;
+    transition: all 0.2s ease;
+}
+
+.enlace-foto a:hover {
+    color: #111111;
+    border-bottom-color: #111111;
 }
