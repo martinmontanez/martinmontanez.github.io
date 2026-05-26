@@ -1,0 +1,40 @@
+/* Configuración base */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: #060D0C; /* Nuevo color de texto solicitado */
+    /* Fondo con color base #F0EDE5 y un degradado sutil hacia negro al fondo */
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 100%), #F0EDE5;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Estilos de Título */
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 72px;
+    margin-bottom: 50px;
+
+}
+
+/* Estilos de Subtítulos */
+h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+/* Estilos de Párrafos */
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    max-width: 500px;
+    line-height: 1.6;
+    margin: 0 auto 50px auto;
+}
